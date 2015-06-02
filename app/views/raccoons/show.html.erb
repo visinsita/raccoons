@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @raccoon.name %>
+</p>
+
+<p>
+  <strong>Claw ferocity:</strong>
+  <%= @raccoon.claw_ferocity %>
+</p>
+
+<p>
+  <strong>Disposition:</strong>
+  <%= @raccoon.disposition %>
+</p>
+
+<%= link_to 'Edit', edit_raccoon_path(@raccoon) %> |
+<%= link_to 'Back', raccoons_path %>
