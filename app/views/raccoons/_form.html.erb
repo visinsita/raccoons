@@ -16,12 +16,15 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :claw_ferocity %><br>
-    <%= f.number_field :claw_ferocity %>
+    <%= f.select :claw_ferocity, (1..10).to_a, {:include_blank => 'Claw Ferocity'}, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :disposition %><br>
     <%= f.text_field :disposition %>
+  </div>
+  <div class="field">
+    <%= f.label "Photo" %><br>
+    <%= f.file_field :avatar %>
   </div>
   <div class="actions">
     <%= f.submit %>

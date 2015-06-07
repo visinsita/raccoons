@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+#emoji support
+gem 'gemoji'
+# Add avatars to database objects.
+gem "paperclip"
 # CSS bootstrap
 gem 'bootstrap-sass'
 # Secure login gem

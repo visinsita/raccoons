@@ -1,0 +1,137 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body {
+  background: url("<%= asset_path 'bg.png' %>") no-repeat;
+  background-size: cover;
+  font-family: 'Prociono', serif;
+}
+
+.navbar-default {
+  background-color: #4f4f4f;
+  border-color: #555555;
+  border-radius: 0%;
+  
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #b6b4b4;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #b6b4b4;
+}
+.navbar-default .navbar-toggle {
+  border-color: #b6b4b4;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #b6b4b4;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #b6b4b4;
+  }
+}
+
+.jumbotron {
+  text-align: center;
+  background: rgba(255,255,255,0.8);
+  top: 0;  
+}
+
+.raccoon-vatar {
+  float: left;
+  margin-top: 10%;
+}
+
+.raccoon-deets {
+  float: left;
+  margin: 5%;
+}
+
+.row {
+  margin-right: 0px;
+}
+
+.btn {
+  background-color: #4f4f4f;
+  border-color: #4f4f4f;
+}
+
+body > div.jumbotron > p:nth-child(3) > a:hover {
+  background-color: #b6b4b4;
+  border-color: #4f4f4f;
+}
+
+body > div.row > div > div {
+   background: rgba(255,255,255,0.8);
+}
+
+.raccoon-time {
+  border:0;
+  padding:0;
+  background: none;
+}
+
+
+.raccoon-fo {
+    width:100%; 
+    height:100%; 
+    z-index:-5;
+    opacity: 0;
+    top:0; 
+    left:0; 
+    position:fixed; 
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.placement {
+  position: fixed;
+  background: rgba(255,255,255,0.9);
+  text-align: center;
+  padding: 5vh;
+  border-radius: 10%;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

@@ -5,6 +5,7 @@ class RaccoonsController < ApplicationController
   # GET /raccoons.json
   def index
     @raccoons = Raccoon.all
+    @raccoon = Raccoon.find(1)
   end
 
   # GET /raccoons/1
@@ -28,7 +29,7 @@ class RaccoonsController < ApplicationController
 
     respond_to do |format|
       if @raccoon.save
-        format.html { redirect_to @raccoon, notice: 'Raccoon was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Raccoon was successfully created.' }
         format.json { render :show, status: :created, location: @raccoon }
       else
         format.html { render :new }
@@ -69,6 +70,6 @@ class RaccoonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def raccoon_params
-      params.require(:raccoon).permit(:name, :claw_ferocity, :disposition)
+      params.require(:raccoon).permit(:name, :claw_ferocity, :disposition, :avatar)
     end
 end

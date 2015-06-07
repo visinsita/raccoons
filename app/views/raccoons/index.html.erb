@@ -1,31 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Raccoons</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Claw ferocity</th>
-      <th>Disposition</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @raccoons.each do |raccoon| %>
-      <tr>
-        <td><%= raccoon.name %></td>
-        <td><%= raccoon.claw_ferocity %></td>
-        <td><%= raccoon.disposition %></td>
-        <td><%= link_to 'Show', raccoon %></td>
-        <td><%= link_to 'Edit', edit_raccoon_path(raccoon) %></td>
-        <td><%= link_to 'Destroy', raccoon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="jumbotron">
+  <h1>Raccoon Metadata Project</h1>
+  <p>Collecting information on raccoons and the furniture they own.</p>
+  <p><%= link_to "Learn More", new_raccoon_path, class: "btn btn-primary btn-lg", role: "button" %></p>
+</div>
 
 <br>
 
-<%= link_to 'New Raccoon', new_raccoon_path %>
+<div class="row">
+    <% @raccoons.each do |raccoon| %>
+      <div class="col-md-4">
+       <div class="panel panel-default">
+        <div class="panel-body">
+          <%  if raccoon.avatar_file_name %>
+          <div class="raccoon-vatar"><a href="javascript:loadRaccoon(<%= raccoon.id %>, '<%= asset_path raccoon.avatar.url(:medium) %>');"><%= image_tag raccoon.avatar.url(:thumb), class: "img-responsive raccoon-time" %></a></div>
+          <% end %>
+          <div class="raccoon-deets">
+          <h2>Name: <%= raccoon.name %></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+<div class= "raccoon-fo">
+ <div class="panel panel-default">
+  <div class="panel-body placement">
+  <div class = "inforaccoon"></div>
+</div>
+</div>
+</div>
