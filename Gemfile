@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'gon'
 #emoji support
 gem 'gemoji'
 # Add avatars to database objects.

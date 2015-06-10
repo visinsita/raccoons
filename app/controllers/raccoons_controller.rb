@@ -1,17 +1,16 @@
 class RaccoonsController < ApplicationController
   before_action :set_raccoon, only: [:show, :edit, :update, :destroy]
+  before_action :set_furniture, only: [:show]
 
   # GET /raccoons
   # GET /raccoons.json
   def index
     @raccoons = Raccoon.all
-    @raccoon = Raccoon.find(1)
   end
-
-  # GET /raccoons/1
-  # GET /raccoons/1.json
-  def show
+  
+  def about
   end
+  
 
   # GET /raccoons/new
   def new
@@ -66,6 +65,10 @@ class RaccoonsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_raccoon
       @raccoon = Raccoon.find(params[:id])
+    end
+    
+    def set_furniture
+      @furniture = Furniture.new
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+
+  resources :furnitures
   devise_for :users
   resources :raccoons
   
   root 'raccoons#index'
+  
+  get 'about' => 'raccoons#about'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

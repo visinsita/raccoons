@@ -15,31 +15,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+////
 $(document).ready(function(){
-  $(".raccoon-time").click(function(){    
-    $(".raccoon-fo").css({
-                          'z-index' : '5',
-                          'opacity' : '1'
-    });
-    
+  
+  $(".raccoon-off").click(function(){ 
+      
+    $('.placement').slideUp(350);
+    $(".furniture").css({'display' : ''});
+    $(".raccoon-fo").css({'z-index' : '-5', 'opacity' : '0'});
+     
   });
   
-    $(".raccoon-fo").click(function(){    
-    $(".raccoon-fo").css({
-                          'z-index' : '-5',
-                          'opacity' : '0'
-    }); 
-  });
+  $(".furniture").click(function(){
+    $('#furniture-form').slideDown(350);
+    $(".furniture").css({'display' : 'none'}); 
+   });
+ 
 });
-
-  function loadRaccoon(id, avatar){
-     var raccoon = "/raccoons/" + id + ".json";
-    $.getJSON(raccoon, function(data){
-      var html = "";
-	// alert(data[index].content);
-	 html += "<image src = '" + avatar + "'/><h2>" + data["name"] + "</h2><p>Claw Ferocity: " + data["claw_ferocity"] + "</p><p>Disposition: " + data["disposition"] + "</p><br>";
-	// update our div
-	  $(".inforaccoon").html(html);
-	});
-       }

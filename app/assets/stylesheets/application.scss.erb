@@ -76,15 +76,14 @@ body {
   top: 0;  
 }
 
-.raccoon-vatar {
-  float: left;
-  margin-top: 10%;
+.raccoon-deets h2{
+  padding-top: 10px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.raccoon-deets {
-  float: left;
-  margin: 5%;
-}
 
 .row {
   margin-right: 0px;
@@ -110,28 +109,55 @@ body > div.row > div > div {
   background: none;
 }
 
-
 .raccoon-fo {
     width:100%; 
     height:100%; 
     z-index:-5;
     opacity: 0;
-    top:0; 
-    left:0; 
-    position:fixed; 
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.6);
+    position:fixed;
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
 }
 
+
+
+
 .placement {
-  position: fixed;
+  display:none;
   background: rgba(255,255,255,0.9);
   text-align: center;
   padding: 5vh;
-  border-radius: 10%;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  max-height: 100%;
+  overflow-y: scroll;
+  z-index: 5;
+//  position:fixed;
+//  top: 50%;
+//  left: 50%;
+//  transform: translate(-50%, -50%);
+}
+
+.sizer {
+}
+
+.furniture {
+}
+
+.raccoon-vatar {
+  float: left;
+}
+
+
+.raccoon-off {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 15px;
+  padding: 0;
+  vertical-align: text-top;
+  border: none;
+  background: none;
 }
